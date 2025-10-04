@@ -41,7 +41,7 @@
     .ticker > span { display: inline-block; padding-left: 100%; animation: marquee 18s linear infinite; }
     @keyframes marquee { 0% { transform: translateX(0); } 100% { transform: translateX(-100%); } }
 
-    /* === Futuristic Background === */
+    /* Futuristic Background */
     body {
       background: linear-gradient(135deg, #0f172a 0%, #1e293b 40%, #38bdf8 100%);
       background-attachment: fixed;
@@ -83,7 +83,7 @@
   <!-- Top ticker -->
   <div class="ticker bg-slate-900/70 border-b border-slate-800">
     <span class="py-2 inline-block">
-      ⏳ TIMECHAIN ($TICK) • Every Tick Counts • Don’t run out of time • Launching on Pump.fun • ⏳ TIMECHAIN ($TICK) • Every Tick Counts • Don’t run out of time • Launching on Pump.fun •
+      ⏳ TIMECHAIN ($TICK) • Every Tick Counts • Don’t run out of time • Trading on Pump.fun • ⏳ TIMECHAIN ($TICK) • Every Tick Counts • Don’t run out of time • Trading on Pump.fun •
     </span>
   </div>
 
@@ -108,44 +108,42 @@
         <h2 class="brand text-4xl md:text-6xl font-extrabold leading-tight">
           Every <span class="text-sky-400 tick-blink">Tick</span> Counts.
         </h2>
-        <p class="mt-4 text-slate-300 text-lg">The memecoin that makes <span class="font-semibold">time</span> tradable. Hold, play, and race the clock. Don’t run out of time.</p>
+        <p class="mt-4 text-slate-200 text-lg">The memecoin that makes <span class="font-semibold">time</span> tradable. Hold, play, and race the clock.</p>
 
         <!-- Contract -->
         <div class="mt-6 p-4 card rounded-2xl">
           <div class="text-xs uppercase text-slate-400 mb-1">Contract</div>
           <div class="flex flex-col sm:flex-row sm:items-center gap-3">
-            <code id="contract" class="ringy rounded-xl px-3 py-2 text-sky-300 text-sm break-all">
-              YOUR_SOLANA_CONTRACT_ADDRESS_HERE
-            </code>
+            <code id="contract" class="ringy rounded-xl px-3 py-2 text-sky-300 text-sm break-all">YOUR_SOLANA_CONTRACT_ADDRESS_HERE</code>
             <button id="copyBtn" class="btn bg-sky-500 hover:bg-sky-400 text-slate-900 font-semibold rounded-xl px-4 py-2">Copy</button>
           </div>
-          <p class="mt-2 text-xs text-slate-400">⚠️ Verify on Pump.fun before aping.</p>
+          <p class="mt-2 text-xs text-slate-400">⚠️ Verify the address on Pump.fun before aping.</p>
         </div>
 
         <!-- CTAs -->
         <div class="mt-6 flex flex-wrap gap-3">
-          <a id="buy" href="https://pump.fun/coin/YOUR_CONTRACT" target="_blank" class="btn bg-sky-500 hover:bg-sky-400 text-slate-900 font-bold px-5 py-3 rounded-2xl glow">Buy on Pump.fun</a>
-          <a href="https://dexscreener.com/solana/YOUR_RAYDIUM_POOL" target="_blank" class="btn border border-slate-700 hover:border-slate-500 px-5 py-3 rounded-2xl">Chart</a>
+          <a id="buy" href="https://pump.fun/coin/YOUR_CONTRACT" target="_blank" class="btn bg-sky-500 hover:bg-sky-400 text-slate-900 font-bold px-5 py-3 rounded-2xl glow">Trade on Pump.fun</a>
+          <a href="https://pump.fun/coin/YOUR_CONTRACT" target="_blank" class="btn border border-slate-700 hover:border-slate-500 px-5 py-3 rounded-2xl">Chart</a>
           <a href="https://t.me/YOUR_TELEGRAM" target="_blank" class="btn border border-slate-700 hover:border-slate-500 px-5 py-3 rounded-2xl">Telegram</a>
           <a href="https://x.com/YOUR_X_HANDLE" target="_blank" class="btn border border-slate-700 hover:border-slate-500 px-5 py-3 rounded-2xl">X (Twitter)</a>
         </div>
 
         <!-- Countdown -->
-        <div class="mt-6 text-sm text-slate-400">
-          Next Snapshot Event in: <span id="countdown" class="text-sky-300 font-semibold">loading…</span>
+        <div class="mt-6 text-sm text-slate-300">
+          Next Snapshot Event in: <span id="countdown" class="text-sky-200 font-semibold">loading…</span>
         </div>
       </div>
 
       <!-- Clock panel -->
       <div class="relative">
         <div class="rounded-3xl p-6 card">
-          <div class="aspect-square rounded-2xl bg-gradient-to-b from-slate-900 to-slate-950 ringy flex items-center justify-center">
+          <div class="aspect-square rounded-2xl bg-gradient-to-b from-slate-900/70 to-slate-950/70 ringy flex items-center justify-center">
             <div class="text-center">
-              <div class="brand text-sky-400 text-6xl md:text-7xl tick-blink">⏳</div>
+              <div class="brand text-sky-300 text-6xl md:text-7xl tick-blink">⏳</div>
               <div class="mt-3 text-slate-300">“You’re literally buying time.”</div>
             </div>
           </div>
-          <div class="mt-4 text-xs text-slate-400">Live utility rolls out right after Raydium migration: snapshot rewards, “extra ticks,” and time-based micro-games.</div>
+          <div class="mt-4 text-xs text-slate-400">Utility: snapshot rewards, “extra ticks,” and time-based micro-games.</div>
         </div>
       </div>
     </div>
@@ -157,15 +155,15 @@
     <div class="grid gap-5 grid-cards">
       <div class="p-5 rounded-2xl card">
         <div class="font-semibold text-lg mb-1">HODL ➜ Earn “Ticks”</div>
-        <p class="text-slate-300">Holders at snapshot (e.g., every 24h) receive small bonus tick drops.</p>
+        <p class="text-slate-300">Daily/weekly snapshots reward holders with small bonus drops. Transparent CSV + TX links.</p>
       </div>
       <div class="p-5 rounded-2xl card">
         <div class="font-semibold text-lg mb-1">Countdown Events</div>
-        <p class="text-slate-300">Timers build FOMO — “don’t miss the tick.”</p>
+        <p class="text-slate-300">Timer-based events with prizes for holders, biggest net buyers, and best memes.</p>
       </div>
       <div class="p-5 rounded-2xl card">
         <div class="font-semibold text-lg mb-1">Mini Time Games</div>
-        <p class="text-slate-300">Post-migration micro-games: wager $TICK in timing challenges.</p>
+        <p class="text-slate-300">Micro-games where timing is everything. Wager tiny amounts of $TICK; leaderboards + badges.</p>
       </div>
     </div>
   </section>
@@ -175,9 +173,10 @@
     <h3 class="brand text-3xl font-bold mb-6">Tokenomics</h3>
     <ul class="space-y-2 text-slate-300">
       <li>• <span class="font-semibold">Supply:</span> 1,000,000,000 $TICK</li>
-      <li>• <span class="font-semibold">Launch:</span> Fair on Pump.fun (no presale)</li>
-      <li>• <span class="font-semibold">Liquidity:</span> Pump.fun 100 SOL bonding curve (auto Raydium pool)</li>
-      <li>• <span class="font-semibold">Post-migration:</span> 90% community • 5% marketing • 5% rewards</li>
+      <li>• <span class="font-semibold">Launch:</span> Fair launch on Pump.fun (no presale, no team edge)</li>
+      <li>• <span class="font-semibold">Liquidity:</span> Pump.fun bonding-curve market making (no forced Raydium migration)</li>
+      <li>• <span class="font-semibold">Float Plan:</span> ~90% community float • 5% marketing • 5% rewards/treasury</li>
+      <li>• <span class="font-semibold">Taxes:</span> 0% buy / 0% sell — meme-first trading</li>
     </ul>
   </section>
 
@@ -187,8 +186,8 @@
     <ol class="list-decimal ml-6 space-y-2 text-slate-300">
       <li>Get SOL in your wallet (Phantom, Backpack, OKX, etc.).</li>
       <li>Open Pump.fun and search <span class="font-semibold">$TICK</span> or paste the contract.</li>
-      <li>Ape in responsibly. Verify the contract and socials.</li>
-      <li>After migration to Raydium, you can also trade on DEX.</li>
+      <li>Trade directly on the Pump.fun bonding curve. Always verify the CA.</li>
+      <li>Optional: if third-party listings appear later, we’ll post links on Telegram/X.</li>
     </ol>
   </section>
 
@@ -196,10 +195,10 @@
   <section id="roadmap" class="max-w-6xl mx-auto px-4 py-10">
     <h3 class="brand text-3xl font-bold mb-6">Roadmap (Speedrun)</h3>
     <div class="grid gap-5 grid-cards">
-      <div class="p-5 rounded-2xl card">Phase 1 — Pump.fun launch</div>
-      <div class="p-5 rounded-2xl card">Phase 2 — Raydium migration + snapshots</div>
-      <div class="p-5 rounded-2xl card">Phase 3 — Mini-games rollout</div>
-      <div class="p-5 rounded-2xl card">Phase 4 — Scaling + collabs</div>
+      <div class="p-5 rounded-2xl card">Phase 1 — Pump.fun fair launch + first snapshot</div>
+      <div class="p-5 rounded-2xl card">Phase 2 — Open-source snapshot scripts + “extra ticks” drops</div>
+      <div class="p-5 rounded-2xl card">Phase 3 — Mini-games MVP + leaderboards</div>
+      <div class="p-5 rounded-2xl card">Phase 4 — Optional listings/collabs as community grows</div>
     </div>
   </section>
 
@@ -207,19 +206,23 @@
   <section id="faq" class="max-w-6xl mx-auto px-4 py-10">
     <h3 class="brand text-3xl font-bold mb-6">FAQ</h3>
     <details class="p-5 rounded-2xl card">
-      <summary class="font-semibold cursor-pointer">What makes $TICK different?</summary>
-      <p class="mt-2 text-slate-300">It tokenizes TIME itself. Snapshots, countdowns, games keep attention locked.</p>
+      <summary class="font-semibold cursor-pointer">Why no Raydium?</summary>
+      <p class="mt-2 text-slate-300">Current meta trades directly on Pump.fun’s bonding curve. If CEX/DEX listings happen later, we’ll announce them.</p>
+    </details>
+    <details class="p-5 rounded-2xl card">
+      <summary class="font-semibold cursor-pointer">What makes $TICK sticky?</summary>
+      <p class="mt-2 text-slate-300">TIME narrative + frequent snapshots, countdown events, and mini-games that reward attention.</p>
     </details>
   </section>
 
   <!-- Footer -->
   <footer class="border-t border-slate-800">
     <div class="max-w-6xl mx-auto px-4 py-8 flex flex-col md:flex-row items-center justify-between gap-4">
-      <div class="text-slate-400 text-sm">© <span id="year"></span> TIMECHAIN — Every Tick Counts.</div>
+      <div class="text-slate-300 text-sm">© <span id="year"></span> TIMECHAIN — Every Tick Counts.</div>
       <div class="flex gap-3 text-sm">
-        <a href="https://t.me/YOUR_TELEGRAM" target="_blank" class="hover:text-sky-300">Telegram</a>
-        <a href="https://x.com/YOUR_X_HANDLE" target="_blank" class="hover:text-sky-300">X (Twitter)</a>
-        <a href="https://pump.fun/coin/YOUR_CONTRACT" target="_blank" class="hover:text-sky-300">Pump.fun</a>
+        <a href="https://t.me/YOUR_TELEGRAM" target="_blank" class="hover:text-sky-200">Telegram</a>
+        <a href="https://x.com/YOUR_X_HANDLE" target="_blank" class="hover:text-sky-200">X (Twitter)</a>
+        <a href="https://pump.fun/coin/YOUR_CONTRACT" target="_blank" class="hover:text-sky-200">Pump.fun</a>
       </div>
     </div>
   </footer>
