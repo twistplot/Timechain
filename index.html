@@ -16,7 +16,7 @@
   <meta name="twitter:description" content="Every Tick Counts. Don’t run out of time." />
   <meta name="twitter:image" content="/timechain-og.png" />
 
-  <!-- Favicon (emoji clock) -->
+  <!-- Favicon -->
   <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' height='64' width='64'%3E%3Ctext y='50%25' x='50%25' dominant-baseline='middle' text-anchor='middle' font-size='52'%3E%E2%8F%B0%3C/text%3E%3C/svg%3E" />
 
   <!-- Tailwind -->
@@ -40,6 +40,29 @@
     .ticker { white-space: nowrap; overflow: hidden; }
     .ticker > span { display: inline-block; padding-left: 100%; animation: marquee 18s linear infinite; }
     @keyframes marquee { 0% { transform: translateX(0); } 100% { transform: translateX(-100%); } }
+
+    /* === Futuristic Background === */
+    body {
+      background: linear-gradient(135deg, #0f172a 0%, #1e293b 40%, #38bdf8 100%);
+      background-attachment: fixed;
+      color: #f1f5f9;
+      position: relative;
+    }
+    body::before {
+      content: "";
+      position: fixed;
+      top:0; left:0; right:0; bottom:0;
+      background-image: 
+        linear-gradient(rgba(255,255,255,0.05) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(255,255,255,0.05) 1px, transparent 1px);
+      background-size: 60px 60px;
+      pointer-events: none;
+      z-index: 0;
+    }
+    main, header, section, footer {
+      position: relative;
+      z-index: 1;
+    }
   </style>
 
   <!-- Schema -->
@@ -55,7 +78,8 @@
   }
   </script>
 </head>
-<body class="bg-slate-950 text-slate-100 selection:bg-sky-500/30">
+
+<body class="text-slate-100 selection:bg-sky-500/30">
   <!-- Top ticker -->
   <div class="ticker bg-slate-900/70 border-b border-slate-800">
     <span class="py-2 inline-block">
@@ -106,7 +130,7 @@
           <a href="https://x.com/YOUR_X_HANDLE" target="_blank" class="btn border border-slate-700 hover:border-slate-500 px-5 py-3 rounded-2xl">X (Twitter)</a>
         </div>
 
-        <!-- Countdown (for next event) -->
+        <!-- Countdown -->
         <div class="mt-6 text-sm text-slate-400">
           Next Snapshot Event in: <span id="countdown" class="text-sky-300 font-semibold">loading…</span>
         </div>
@@ -133,15 +157,15 @@
     <div class="grid gap-5 grid-cards">
       <div class="p-5 rounded-2xl card">
         <div class="font-semibold text-lg mb-1">HODL ➜ Earn “Ticks”</div>
-        <p class="text-slate-300">Holders at snapshot (e.g., every 24h) receive small bonus tick drops. Simple, meme-friendly rewards with transparent snapshots.</p>
+        <p class="text-slate-300">Holders at snapshot (e.g., every 24h) receive small bonus tick drops.</p>
       </div>
       <div class="p-5 rounded-2xl card">
         <div class="font-semibold text-lg mb-1">Countdown Events</div>
-        <p class="text-slate-300">Periodic timer events with thematic airdrops and competitions. Timers build FOMO — “don’t miss the tick.”</p>
+        <p class="text-slate-300">Timers build FOMO — “don’t miss the tick.”</p>
       </div>
       <div class="p-5 rounded-2xl card">
         <div class="font-semibold text-lg mb-1">Mini Time Games</div>
-        <p class="text-slate-300">Web mini-games (post-migration): wager tiny amounts of $TICK in timing challenges. Leaderboards, badges, memes.</p>
+        <p class="text-slate-300">Post-migration micro-games: wager $TICK in timing challenges.</p>
       </div>
     </div>
   </section>
@@ -149,19 +173,12 @@
   <!-- Tokenomics -->
   <section id="tokenomics" class="max-w-6xl mx-auto px-4 py-10">
     <h3 class="brand text-3xl font-bold mb-6">Tokenomics</h3>
-    <div class="grid md:grid-cols-2 gap-6">
-      <div class="p-5 rounded-2xl card">
-        <ul class="space-y-2 text-slate-300">
-          <li>• <span class="font-semibold">Total Supply:</span> 1,000,000,000 $TICK</li>
-          <li>• <span class="font-semibold">Launch:</span> Fair launch on Pump.fun (no presale, no team advantage)</li>
-          <li>• <span class="font-semibold">Liquidity:</span> Pump.fun bonding curve (starts ~100 SOL; auto Raydium pool on migration)</li>
-          <li>• <span class="font-semibold">Post-migration plan:</span> 90% community in float • 5% marketing • 5% rewards/treasury</li>
-        </ul>
-      </div>
-      <div class="p-5 rounded-2xl card">
-        <div class="text-slate-300">Taxes: 0% buy / 0% sell (meme-first).<br/>Snapshots & drops announced on Telegram/X. All wallets eligible; sybil and wash filters may apply.</div>
-      </div>
-    </div>
+    <ul class="space-y-2 text-slate-300">
+      <li>• <span class="font-semibold">Supply:</span> 1,000,000,000 $TICK</li>
+      <li>• <span class="font-semibold">Launch:</span> Fair on Pump.fun (no presale)</li>
+      <li>• <span class="font-semibold">Liquidity:</span> Pump.fun 100 SOL bonding curve (auto Raydium pool)</li>
+      <li>• <span class="font-semibold">Post-migration:</span> 90% community • 5% marketing • 5% rewards</li>
+    </ul>
   </section>
 
   <!-- How to buy -->
@@ -171,7 +188,7 @@
       <li>Get SOL in your wallet (Phantom, Backpack, OKX, etc.).</li>
       <li>Open Pump.fun and search <span class="font-semibold">$TICK</span> or paste the contract.</li>
       <li>Ape in responsibly. Verify the contract and socials.</li>
-      <li>After migration to Raydium, you can also trade on DEX with the pool link.</li>
+      <li>After migration to Raydium, you can also trade on DEX.</li>
     </ol>
   </section>
 
@@ -179,42 +196,20 @@
   <section id="roadmap" class="max-w-6xl mx-auto px-4 py-10">
     <h3 class="brand text-3xl font-bold mb-6">Roadmap (Speedrun)</h3>
     <div class="grid gap-5 grid-cards">
-      <div class="p-5 rounded-2xl card">
-        <div class="font-semibold">Phase 1 — Launch Week</div>
-        <p class="text-slate-300">Pump.fun fair launch, OG image + memes, first countdown snapshot.</p>
-      </div>
-      <div class="p-5 rounded-2xl card">
-        <div class="font-semibold">Phase 2 — Migration</div>
-        <p class="text-slate-300">Auto Raydium pool, open-source snapshot scripts, first “extra ticks” drop.</p>
-      </div>
-      <div class="p-5 rounded-2xl card">
-        <div class="font-semibold">Phase 3 — Mini-Games</div>
-        <p class="text-slate-300">Release time-challenge micro-games + leaderboards. Collabs with CT builders.</p>
-      </div>
-      <div class="p-5 rounded-2xl card">
-        <div class="font-semibold">Phase 4 — Scale</div>
-        <p class="text-slate-300">More events, community toolkits, playful integrations (countdown bots, tick badges).</p>
-      </div>
+      <div class="p-5 rounded-2xl card">Phase 1 — Pump.fun launch</div>
+      <div class="p-5 rounded-2xl card">Phase 2 — Raydium migration + snapshots</div>
+      <div class="p-5 rounded-2xl card">Phase 3 — Mini-games rollout</div>
+      <div class="p-5 rounded-2xl card">Phase 4 — Scaling + collabs</div>
     </div>
   </section>
 
   <!-- FAQ -->
   <section id="faq" class="max-w-6xl mx-auto px-4 py-10">
     <h3 class="brand text-3xl font-bold mb-6">FAQ</h3>
-    <div class="space-y-4">
-      <details class="p-5 rounded-2xl card">
-        <summary class="font-semibold cursor-pointer">What makes $TICK different?</summary>
-        <p class="mt-2 text-slate-300">It weaponizes the culture of timing in crypto. Simple, sticky utility (snapshots + drops + games) keeps attention.</p>
-      </details>
-      <details class="p-5 rounded-2xl card">
-        <summary class="font-semibold cursor-pointer">Is there a tax?</summary>
-        <p class="mt-2 text-slate-300">No buy/sell tax. We want frictionless trading and fun.</p>
-      </details>
-      <details class="p-5 rounded-2xl card">
-        <summary class="font-semibold cursor-pointer">When airdrops?</summary>
-        <p class="mt-2 text-slate-300">Countdown snapshots happen frequently in early weeks. Announced on Telegram + X.</p>
-      </details>
-    </div>
+    <details class="p-5 rounded-2xl card">
+      <summary class="font-semibold cursor-pointer">What makes $TICK different?</summary>
+      <p class="mt-2 text-slate-300">It tokenizes TIME itself. Snapshots, countdowns, games keep attention locked.</p>
+    </details>
   </section>
 
   <!-- Footer -->
@@ -243,7 +238,7 @@
       setTimeout(()=> copyBtn.textContent='Copy', 1400);
     });
 
-    // Countdown to next snapshot (default: daily 20:00 UTC)
+    // Countdown
     function nextSnapshotUTC(h=20,m=0,s=0){
       const now = new Date();
       const target = new Date(Date.UTC(now.getUTCFullYear(), now.getUTCMonth(), now.getUTCDate(), h, m, s));
